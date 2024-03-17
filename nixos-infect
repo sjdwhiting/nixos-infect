@@ -46,7 +46,7 @@ makeConf() {
   networking.hostName = "$(hostname -s)";
   networking.domain = "$(hostname -d)";
   services.openssh.enable = true;
-  users.user.root.hashedPassword = "$6$oPE8YPjdJJlXPu$9atdzPmQQrQFzqBhAc6emqNmWwO1h7bJVVUQfE6nE0NaQ8PCjbhqWm4EUQTulYYiZkKbjsZcXnBsCX1dZYff20";
+  users.users.root.hashedPassword = "$6$oPE8YPjdJJlXPu$9atdzPmQQrQFzqBhAc6emqNmWwO1h7bJVVUQfE6nE0NaQ8PCjbhqWm4EUQTulYYiZkKbjsZcXnBsCX1dZYff20";
   users.users.root.openssh.authorizedKeys.keys = [$(while read -r line; do
     line=$(echo -n "$line" | sed 's/\r//g')
     trimmed_line=$(echo -n "$line" | xargs)
